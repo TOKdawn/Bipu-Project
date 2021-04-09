@@ -11,7 +11,7 @@ const systemXHR = new Proxy(XHRList,{ //拦截未定义的URL请求
 })
 XHRList.login = function(data) {
     return request({
-        url: '/api/fin-services/v1/system-info/login',
+        url: '/fin-services/v1/system-info/login',
         method: 'post',
         data
     })
