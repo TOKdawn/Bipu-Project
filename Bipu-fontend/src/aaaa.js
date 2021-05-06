@@ -18,4 +18,5 @@ module.exports = {
         rewrite: path => path.replace(/^\/api/, '')
         }
     }
+    
 }
