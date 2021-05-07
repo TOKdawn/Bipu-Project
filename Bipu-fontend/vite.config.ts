@@ -7,9 +7,20 @@ const pathResolve = (pathStr: string): string => {
 }
 
 export default defineConfig({
-  alias: {
-    '@': pathResolve('./src'),
-  },
+    resolve: {
+        alias: [
+          // /@/xxxx => src/xxxx
+          {
+            find: /\/@\//,
+            replacement: pathResolve('src') + '/',
+          },
+          // /#/xxxx => types/xxxx
+          {
+            find: /\/#\//,
+            replacement: pathResolve('types') + '/',
+          },
+        ],
+    },
   server: {
     port: 8000, // 默认是 3000 端口
     open: false,
