@@ -5,6 +5,7 @@ export interface RequestOptions {
     apiUrl?: string;// Interface address, use the default apiUrl if you leave it blank
     errorMessageMode?: ErrorMessageMode; //错误信息
     joinTime?: boolean; //时间戳
+    ignoreCancelToken?: boolean; //取消重复请求
 }
 export interface Result<T = any> {
     code: number;
