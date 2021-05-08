@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from '@/router'
 // import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css'
 import { Elcomponents, Elplugins } from './ElementUI'
-import './index.css'
+// import './index.css'
 //创建Vue实例
 const app = createApp(App)
 

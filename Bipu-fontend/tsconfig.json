@@ -42,7 +42,10 @@
        ],
   
       "isolatedModules": true,
-  
+
+      //允许json引入
+      "resolveJsonModule": true,
+
       // 模块名到基于 baseUrl的路径映射的列表。
       "paths": {
         "@/*": [
