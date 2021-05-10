@@ -51,7 +51,14 @@ module.exports = defineConfig({
       },
     ],
     'space-before-function-paren': 'off',
-
+    'indent': 'off',
+    'vue/script-indent': [
+      'error',
+      4,
+      {
+        'baseIndent': 1
+      }
+    ],
     'vue/attributes-order': 'off',
     'vue/one-component-per-file': 'off',
     'vue/html-closing-bracket-newline': 'off',

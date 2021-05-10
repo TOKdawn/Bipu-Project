@@ -32,7 +32,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig =>{
             alias: [
               // /@/xxxx => src/xxxx
               {
-                find: /\/@\//,
+                find: /@/,
                 replacement: pathResolve('src') + '/',
               },
               // /#/xxxx => types/xxxx
@@ -56,7 +56,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig =>{
               },
             },
           },
-          build: {
+        build: {
             target: 'es2015',
             terserOptions: {
               compress: {
@@ -68,8 +68,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig =>{
             // Turning off brotliSize display can slightly reduce packaging time
             brotliSize: false,
             chunkSizeWarningLimit: 1500,
-          },
-          plugins: [vue()],
+        },
+        plugins: [vue()],
     }
 
 }
